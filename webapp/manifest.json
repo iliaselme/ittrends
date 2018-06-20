@@ -1,0 +1,218 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "sapui5.dashboardDashBoardTest",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sapui5.dashboardDashBoardTest.view.app",
+			"type": "JS"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sapui5.dashboardDashBoardTest.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "JS",
+				"viewPath": "sapui5.dashboardDashBoardTest.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "login",
+				"target": "login"
+			}, {
+				"pattern": "first",
+				"name": "first",
+				"target": "first"
+			}, {
+				"pattern": "admin",
+				"name": "firstAdmin",
+				"target": "firstAdmin"
+			}, {
+				"pattern": "graph",
+				"name": "graph",
+				"target": "graph"
+			}, {
+				"pattern": "total",
+				"name": "total",
+				"target": "total"
+			}, {
+				"pattern": "category",
+				"name": "category",
+				"target": "subCategory",
+				"targetAggregation": "inputPage"
+			}, {
+				"pattern": "companyCodeMaster",
+				"name": "companyCodeMaster",
+				"target": "companyCodeMaster"
+			}, {
+				"pattern": "companyCodeSubCategory",
+				"name": "companyCodeSubCategory",
+				"target": "companyCodeSubCategory"
+			}, {
+				"pattern": "groups",
+				"name": "groups",
+				"target": "groups"
+			}, {
+				"pattern": "updateStatus",
+				"name": "updateStatus",
+				"target": "updateStatus"
+			}, {
+				"pattern": "inactive",
+				"name": "inactive",
+				"target": "inactive"
+			}, {
+				"pattern": "search",
+				"name": "search",
+				"target": "search"
+			}, {
+				"pattern": "searched",
+				"name": "searchedInfo",
+				"target": "searchedInfo"
+			}, {
+				"pattern": "vendor",
+				"name": "vendor",
+				"target": "vendor"
+			},
+			{
+				"pattern": "specificVendor",
+				"name": "specificVendor",
+				"target": "specificVendor"
+			},{
+				"pattern": "createStatus",
+				"name": "createStatus",
+				"target": "createStatus"
+			}],
+			"targets": {
+				"login": {
+					"viewName": "login",
+					"viewLevel": 1
+				},
+				"first": {
+					"viewName": "first",
+					"viewLevel": 1
+				},
+				"firstAdmin": {
+					"viewName": "firstAdmin",
+					"viewLevel": 2
+				},
+				"graph": {
+					"viewName": "graphEndState",
+					"viewLevel": 2
+				},
+				"total": {
+					"viewName": "totalMasterDetail",
+					"viewLevel": 2
+				},
+				"subCategory": {
+					"viewName": "totalSubCategory",
+					"viewLevel": 3
+				},
+				"companyCodeMaster": {
+					"viewName": "companyCodeMasterDetail",
+					"viewLevel": 4
+				},
+				"companyCodeSubCategory": {
+					"viewName": "companyCodeSubCategory",
+					"viewLevel": 5
+				},
+				"groups": {
+					"viewName": "newGroup",
+					"viewLevel": 6
+				},
+				"updateStatus": {
+					"viewName": "updateStatusPerGroup"
+				},
+				"inactive": {
+					"viewName": "showInactive",
+					"viewLevel": 7
+				},
+				"search": {
+					"viewName": "searchPage",
+					"viewLevel": 8
+				},
+				"searchedInfo": {
+					"viewName": "searchedInformation",
+					"viewLevel": 9
+				},
+				"vendor": {
+					"viewName": "vendorInformation",
+					"viewLevel": 10
+				},
+				"specificVendor":{
+					"viewName": "specificVendor",
+					"viewLevel": 11
+				},
+				"createStatus":{
+					"viewName": "createStatus",
+					"viewLevel": 12
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}
